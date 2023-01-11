@@ -1,0 +1,671 @@
+<!-- PE075DS-4_ChungTakSing_15_Assignment_02 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dev.Bd> | Premium Devloper Keyboard</title>
+    <link rel="icon" type="image/x-icon" href="./image/favicon-01.svg">
+    <!-- Using Bootstrap V.5.2.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- google font style  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        :root {
+            --fs-h1: clamp(1.5rem, 3vw + 1.75rem, 7rem);
+            --fs-h3: clamp(1.25rem, 3vw + 1.5rem, 6rem);
+            --fs-h6: clamp(1rem, 1vw + 0.75rem, 1.75rem);
+            --fs-p: 1rem;
+        }
+
+        *,
+        *::before
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        @media (max-width: 1399.98px) { 
+            .intro.product-2 {
+            top: 40% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            text-align: center;
+            width: max(30%, 300px)!important;
+            height: 290px !important;
+            background-color: #fff;
+            padding: 2rem !important;
+            }
+        }
+
+        @media (max-width: 767.98px) { 
+            .intro p {
+                display: none;
+            }
+            div.intro {
+                text-align: center;
+                top: 50% !important;
+                left: 50% !important;
+                transform: translate(-50%, -50%) !important;
+                height:  80px !important;
+                margin: auto !important;
+                padding: 1rem !important;
+            }
+            div.intro.product-2 {
+                height:  80px !important;
+                margin: auto !important;
+                padding: 1rem !important;
+            }
+            div.intro.product-3 {
+                top: 50% !important;
+                left: 50% !important;
+                transform: translate(-50%, -50%) !important;
+                height:  80px !important;
+                padding: 1rem !important;
+            }
+         }
+
+         @media (max-width: 575.98px) { 
+            form {
+                padding: 2rem 2rem !important;
+                margin-top: 1rem !important;
+                margin-bottom: 3rem !important;
+            }
+
+            .carousel-caption p {
+                display: none;
+            }
+         }
+
+        body {
+            margin: 0;
+            width: 100vw;
+            background-color: #000;
+            font-family: "Inter", Helvetica, sans-serif;
+        }
+
+        h1 {
+          font-size: var(--fs-h1);
+          font-weight: 600;
+          line-height: var(--fs-h1);
+        }
+
+        h3 {
+        font-size: var(--fs-h3);
+        font-weight: 100;
+        line-height: var(--fs-h3);
+        }
+
+        h6 {
+            font-size: var(--fs-h6);
+            font-weight: 300;
+            line-height: var(--fs-h6);
+        }
+
+        p {
+          font-size: var(--fs-p);
+          font-weight: 300;
+          margin: 1rem 0;
+          letter-spacing: 1px;
+        }
+
+        .smheader {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            background: linear-gradient(to left, #FF4184, #FF9B00, #FF4184);
+            background-size: 200%;
+            animation: repeatgradient 10s linear infinite;
+        }
+
+        .smheader a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        @keyframes repeatgradient{
+            from {background-position: 0}
+            to {background-position: 200%}
+        }
+
+        #navbar {
+            backdrop-filter: blur(5px) ;
+        }
+
+        .navbar {
+            padding: 0 5vw;
+            background-color: rgba(16, 27, 109, 0.8)!important ;
+        }
+
+        div.offcanvas-body {
+            overflow-y:unset;
+        }
+
+        .offcanvas-header {
+            background-color: #0b0369!important ;
+        }
+
+        .offcanvas-body a {
+            height: 100%;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .offcanvas-body a:hover {
+            color:#ef6c00 !important;
+            border-bottom: 0.1rem solid #ef6c00;
+        }
+
+        .offcanvas-body a:active {
+            color:#ef6c00 !important;
+            border-bottom: 0.1rem solid #ef6c00;
+        }
+
+        .carousel-item {
+            height: 100vh;
+            width: 100vw;
+            min-height: 300px;
+            background-color: #000;
+        }
+
+         
+        .carousel-item > img {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            object-position: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.5;
+        }
+            
+        .carousel-caption {
+            padding-bottom: max(30vh, 250px);
+        }
+
+        .carousel-caption .btn {
+            margin: 10px;
+        }
+
+        .carousel-item h6 {
+            opacity: 0;
+            
+        }
+        .carousel-item h1 {
+            opacity: 0;
+            
+        }
+        .carousel-item p {
+            opacity: 0;
+            
+        }
+        .carousel-item .btn {
+            opacity: 0;
+        }
+
+        .carousel-item.active h6 {
+            animation: fadeIntop 3s ease forwards;
+        }
+        .carousel-item.active h1 {
+            animation: fadeIntop 3s ease forwards;
+        }
+        .carousel-item.active p {
+            animation: fadeInbottom 3s ease forwards;
+        }
+        .carousel-item.active .btn {
+            animation: fadeInbottom 3s ease forwards;
+        }
+
+        @keyframes fadeIntop {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes fadeInbottom {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        .carousel-indicators {
+            padding-bottom: 7vh;
+        }
+
+        .jumbotron .container-fluid {
+            background-color: #ef6c00;
+        }
+
+        .jumbotron > .container-fluid > p {
+            padding: 0 5vw;
+        }
+        .container-img {
+            position: relative;
+            height: 35vw;
+            width: 100%;
+        }
+
+        .container-img img {
+            height: 35vw;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .container-img > h3 {
+            position: absolute;
+            text-align: center;
+            /* color: #FF4184 !important; */
+            font-weight: 600;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: var(--fs-h3);
+            line-height: var(--fs-h1);
+            padding: 0 5vw;
+            word-spacing: 1px;
+        }
+
+        .product-heading{
+            background-color: #0b0369;
+            padding: 6vh 6vw ;
+            color: #FF4184;
+            border-color: #FF4184 !important;
+        }
+
+        .card-body {
+            background-color: #ef6c00;
+            color: #fff;
+            padding: 3vh 6vw ;
+            width: 100%;
+        }
+
+        .card img {
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        div.intro {
+            top: 8%;
+            left: 8%;
+            width: max(20%, 300px);
+            height:  300px;
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 0px 0px 20px #7f7f7f;
+        }
+
+        div.intro.product-2 {
+            top: 8%;
+            left: 68%;
+            width: max(25%, 280px);
+            height:  250px;
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 0px 0px 20px #7f7f7f;
+        }
+
+        div.intro.product-3 {
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: max(40%, 300px);
+            height:  220px;
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 0px 0px 20px #7f7f7f;
+        }
+
+        div.intro:hover{
+            background-color: rgba(16, 27, 109, 0.8) !important;
+            color: #FF4184;
+            box-shadow: none;
+        }
+
+        .intro h4 {
+            font-size: clamp(1.3rem, 2vw + 0.75rem, 2.3rem);;
+            font-weight: 600;
+            margin: 0;
+            line-height: 3rem;
+            padding-bottom: 1rem;
+        }
+
+        .intro p {
+            margin: 0;
+        }
+
+        .contact-us-container {
+            background:#0b0369;
+            color: #FF4184;
+            border-color: #FF4184 !important;
+        }
+
+        .responsive-map-container {
+            position: relative;
+            padding-bottom: 70%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .responsive-map-container iframe,
+        .responsive-map-container object,
+        .responsive-map-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .footer-container {
+            background-color:#0b0369;
+        }
+
+        .footer-container h6 {
+            color: #ef6c00;
+            font-weight: 300;
+            font-size: var(--fs-h6);
+        }
+        
+
+        .socials a {
+            color: #fff;
+            padding: 0.75rem 0;
+        }
+
+        .form-control {
+            background-color: transparent;
+            border-color:#ffc107;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+    <!-- small header for join our ins -->
+    <div class="smheader"><a href="https://www.instagram.com/">Join our Instagram for latest project updates and new launches!</a></div>
+    </header>
+    <!-- Navbar (always stick at the top) -->
+    <section id="navbar" class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a href="#" class="dev.bd-logo navbar-brand">
+                  <img src="./image/logo with margin.svg" alt="logo" width="168px">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">dev.Bd></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body container-fluid d-lg-flex d-md-flex flex-lg-row flex-md-column justify-content-lg-between align-items-lg-center align-items-md-stretch">
+                          <ul class="nav navbar-nav flex-lg-grow-1 justify-content-center text-decoration-none mb-lg-0 mb-md-2 mb-sm-2">
+                              <li class="nav-item">
+                                  <a href="#home" class="nav-link text-white me-lg-3">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a href="#about-us" class="nav-link text-white mx-lg-3">About us</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a href="#products" class="nav-link text-white mx-lg-3">Products</a>
+                              </li>
+                              <li class="nav-item"
+                              ><a href="#contact-us" class="nav-link text-white mx-lg-3">Contact Us</a>
+                          </li>
+                          </ul>
+                      <div class="button-container text-lg-end text-md-start">
+                          <button type="button" class="btn btn-outline-light me-2 ">Login</button>
+                          <button type="button" class="btn btn-warning">Sign-up</button>
+                      </div>
+                  </div>
+              </div>
+              
+            </div>
+          </nav>
+    </section>
+
+    <!-- Carousel -->
+    <section id="home">
+        <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true" data-bs-pause="hover">
+            <div class="carousel-indicators pb-md-5 pb-sm-5">
+              <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="8000">
+                <img src="./image/carouselSlide-1.jpg" class="d-block img-fluid" alt="Slide1">
+                <div class="carousel-caption">
+                    <h6>dev.Bd> | Premium Mechanical Keyboard For Developer</h6>
+                    <h1>New heights, new lights, and new highlights</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. facere quaerat dignissimos!</p>
+                    <a href="#" class="btn btn-outline-warning" style="--bs-btn-padding-y: 0.5rem; --bs-btn-padding-x: 1.25rem; --bs-btn-font-size: 1.25rem">Learn more</a>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="6000">
+                <img src="./image/carouselSlide-2.jpg" class="d-block img-fluid" alt="Slide2">
+                <div class="carousel-caption text-end">
+                  <h6>dev | rev001</h6>
+                  <h1 class="pb-4">Revolutionzing the laptop experience</h1>
+                  <a href="#" class="btn btn-outline-info mt-0 mb-5" style="--bs-btn-padding-y: 0.5rem; --bs-btn-padding-x: 1.25rem; --bs-btn-font-size: 1.25rem">Buy now</a>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="6000">
+                <img src="./image/carouselSlide-3.jpg" class="d-block img-fluid" alt="Slide3">
+                <div class="carousel-caption text-start">
+                    <h6>dev | ßtk001</h6>
+                    <h1 class="pb-4">The world's thinnest mechanial keyboard.</h1>
+                    <a href="#" class="btn btn-outline-warning mt-0 mb-5" style="--bs-btn-padding-y: 0.5rem; --bs-btn-padding-x: 1.25rem; --bs-btn-font-size: 1.25rem">Buy now</a>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <!-- About Us (Jumbotron component is recommended) -->
+    <section id="about-us">
+        <div class="bg-light jumbotron">
+            <div class="container-fluid p-0 text-center">
+                <h3 class="col-12 text-center text-white pt-5">About dev.Bd></h3>
+                <p class="col-12 fs-5 text-white text-center my-0 pb-3">Designing fun products and programming are where our passions life. We have been thinking about the deeper connections between the two. Therefore, we set out to build a worldview that matches dev.Bd brand personality and anime character setting, hoping that the collision of the two would lead to more imaginative and captivating results.
+
+                Despite all the unknowns, we are fascinated by the process of exploration and its countless possibilities. Perhaps we will find the optimal solution for the combination of product design. One thing is for sure, we will always find inspiration and joy on this journey. 
+                
+                Design is not just a job for us, but a part of life. Welcome to dev.Bd world!
+                </p>
+                <a href="#" class="btn btn-outline-light mb-5" style="--bs-btn-padding-y: 0.5rem; --bs-btn-padding-x: 1.75rem; --bs-btn-font-size: 1.25rem ">Learn more</a>
+                
+            </div>
+        </div>
+        <div class="container-img d-block">
+            <img src="./image/about-us.jpg" alt="aboutUs">
+            <h3 class="text-white">Design is not just a job for us, but a part of life.</h3>
+        </div>
+    </section>
+
+    <!-- Products (Card component is recommended) -->
+        <!-- 1.heading 2. At least 3 products with photo, title, paragraph and button -->
+    <section id="products">
+        <div class="product-heading shadow-sm border-bottom border-4 text-center">
+            <h3>Our product</h3>
+            <p class="fs-5">dev.Bd has been designed in the popular 65% layout, which is both compact and practical, and the overall style continues the sci-fi theme from Endless.</p>
+        </div>
+        <div class="product">
+            <div class="col">
+              <div class="card border border-0">
+                <div class="card-container position-relative">
+                    <img src="./image/product-1.jpg" class="card-img-top" alt="product-1">
+                    <div class="intro position-absolute">
+                        <h4 class="title">White && Black</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque officia quae fugit ipsam suscipit nobis amet exercitationem.</p>
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title fs-3">What's Included</h5>
+                    <p class="card-text fs-5 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit quisquam corporis libero ullam, cupiditate facere amet numquam quia sint animi!</p>
+                    <a href="#" class="btn btn-outline-light mt-0 d-inline-block" style="--bs-btn-padding-y: 0.5rem; --bs-btn-padding-x: 5rem; --bs-btn-font-size: 1.25rem">Buy now</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border border-0">
+                <div class="card-container position-relative">
+                    <img src="./image/product-2.jpg" class="card-img-top position-relative img-fluid" alt="product-2">
+                    <div class="intro product-2 position-absolute">
+                        <h4 class="title">Transformer Board</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. ipsam suscipit nobis amet exercitationem.</p>
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title fs-3">What's Include</h5>
+                        <p class="card-text fs-5 d-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, nisi praesentium officiis soluta aliquam dolorem perferendis eum. Consequatur, sed doloremque.</p>
+                        <a href="#" class="btn btn-outline-light mt-0 d-inline-block" style="--bs-btn-padding-y: 0.5rem; --bs-btn-padding-x: 5rem; --bs-btn-font-size: 1.25rem">Buy now</a>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+                <div class="card border border-0">
+                <div class="card-container position-relative">
+                    <img src="./image/product-3.jpg" class="card-img-top" alt="product-3">
+                    <div class="intro product-3 position-absolute">
+                        <h4 class="title">Metallica</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque officia quae fugit ipsam suscipit nobis amet exercitationem.</p>
+                    </div>
+                </div>
+
+                <div class="card-body text-center">
+                    <h5 class="card-title fs-3">What's Include</h5>
+                        <p class="card-text fs-5 d-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, nisi praesentium officiis soluta aliquam dolorem perferendis eum. Consequatur, sed doloremque.</p>
+                        <a href="#" class="btn btn-outline-light mt-0 d-inline-block" style="--bs-btn-padding-y: 0.5rem; --bs-btn-padding-x: 5rem; --bs-btn-font-size: 1.25rem">Buy now</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Embedded google map -->
+        <!-- A form with name, email message field and a submit button -->
+    <section id="contact-us">
+        <div class="container-fluid text-bg-black text-white p-0">
+                <div class="py-5 text-center contact-us-container shadow-sm border-bottom border-4">
+                    <h3>Contact Us</h3>
+                </div>
+            <div class="row px-lg-5 px-md-3 px-sm-2 py-lg-5">
+                <div class="col-lg-6 col-md-12 col-sm-12 py-lg-2 py-md-3 py-sm-3 px-lg-5 px-md-2 px-sm-1">
+                    <div class="responsive-map-container d-block">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d398.13442389639323!2d114.17905067179551!3d22.299901735369602!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400ef633d3155%3A0xf011bc37cfd203d4!2sChinachem%20Golden%20Plaza!5e0!3m2!1sen!2shk!4v1668844271394!5m2!1sen!2shk" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade" 
+                        title="Map">
+                        </iframe>
+                    </div>
+                </div>
+                <form class="col-lg-6 col-md-12 px-lg-5 px-md-2 px-sm-2 pt-2">
+                    <div class="mb-3">
+                        <label for="InputName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="InputName" name="Name" placeholder=" e.g Peter Pan" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="InputEmail1" aria-describedby="email" required>
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputMessage" class="form-label">Message</label><br>
+                        <textarea name="message" id="InputMessage" class="form-control" cols="30" rows="10" placeholder="Want to learn more? please leave a message."></textarea>
+                      
+                    </div>
+                    <div class="text-center pb-3"><button type="submit" class="btn btn-outline-warning" style="--bs-btn-padding-y: 0.3rem; --bs-btn-padding-x: 5rem; --bs-btn-font-size: 1rem">Submit</button></div>
+                  </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Includes the icons of 3 different social media -->
+    <!-- Links the icons to the corresponding official website -->
+    <!-- Any additional information -->
+    <footer>
+            <div class="container-fluid footer-container px-lg-5 px-md-2 py-4">
+                <div class="row text-white px-5 g-lg-5 g-md-4">
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="single-box text-center">
+                        <h6>Address</h6>
+                        <p>Shop 112, 11/f, 77 Mody Rd, Tsim Sha Tsui East</p>
+                        <h6>Email</h6>
+                        <p>contact@dev.Bd.com</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-12">
+                    <div class="single-box text-center">
+                        <h6>Newsletter</h6>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur doloremque earum similique fugiat nobis. Facere?</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Email Address" aria-label="Enter your Email ..." aria-describedby="basic-addon2">
+                            <span class="input-group-text btn btn-outline-warning" id="basic-addon2" style="--bs-btn-padding-y: 0.3rem; --bs-btn-padding-x: 2rem;"><i class="fa fa-envelope"></i></span>
+                        </div>          
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-12">
+                    <div class="single-box">
+                        <div class="card-area container-fluid text-center h-100">
+                            <h6>Follow us on</h6>
+                            <div class="socials contaniner-fluid d-flex justify-content-evenly pt-3">
+                                <a href=""><i class="fa fa-facebook fa-3x"></i></a>
+                                <a href=""><i class="fa fa-instagram fa-3x"></i></a>
+                                <a href=""><i class="fa fa-whatsapp fa-3x"></i></a>
+                                <a href=""><i class="fa fa-twitter fa-3x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
